@@ -25,7 +25,9 @@ public class Service {
 	}
 
 	public long countFirstNames(String filterFirstName) {
-		return accountManageVar.getMapRefVarforCreateAccounts().values().stream()
+		long count = accountManageVar.getMapRefVarforCreateAccounts().values().stream()
 				.filter(x -> x.getFirstName().equals(filterFirstName)).count();
+		System.out.println(count);
+		return count;
 	}
 }

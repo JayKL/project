@@ -15,5 +15,17 @@ public class mainTestApp {
 
 		assertEquals(2,appref.getServiceRefVar().countFirstNames("Gnome"));
 	}
+	
+	@Test
+	public void test2() {
+		App appref = new App();
+		appref.getAccountManageVar().createAccount("Gnome", "King");
+		appref.getAccountManageVar().createAccount("Ben", "Till");
+		appref.getAccountManageVar().createAccount("Ben", "Till");
+		appref.getAccountManageVar().createAccount("Ben", "Howard");
+
+		
+		assertEquals(3,appref.getServiceRefVar().countFirstNames("Ben"));
+	}
 
 }
