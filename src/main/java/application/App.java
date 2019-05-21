@@ -4,15 +4,18 @@ import AccountManagement.AccountManagement;
 import ServiceForApp.Service;
 
 public class App{
-	public static void main(String xyz[]) {
-		App appref = new App();
+	private AccountManagement accountManageVar=new AccountManagement();
+	private Service serviceRefVar = new Service();
+
+	public Service getServiceRefVar() {
+		return serviceRefVar;
+	}
+
+	public AccountManagement getAccountManageVar() {
+		return accountManageVar;
 	}
 	
 	public App() {
-		AccountManagement accountManageVar=new AccountManagement();
-		Service serviceRefVar = new Service();
-		accountManageVar.createAccount("Gnome", "King");
-		accountManageVar.createAccount("Ben", "Till");
 		System.out.println("Hello world to the standard out");
 		accountManageVar.createJSONFromMap();
 	}
