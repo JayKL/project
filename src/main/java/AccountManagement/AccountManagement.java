@@ -1,7 +1,11 @@
 package AccountManagement;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Account.Account;
 
@@ -26,5 +30,16 @@ public class AccountManagement {
 	
 	public void deleteAccount(int accountNumber) {
 		mapOfAccounts.keySet().removeIf(key -> key == accountNumber);
+	}
+	
+	public void createJSONFromMap() {
+        ObjectMapper mapper = new ObjectMapper();
+		try {
+			String mapJSON;
+			mapJSON=mapper.writeValueAsString(mapOfAccounts);
+			System.out.println(mapJSON);
+		} catch (Exception E) {
+			System.out.println(E);
+		}
 	}
 }
