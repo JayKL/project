@@ -23,20 +23,20 @@ public class AccountManagement {
 	public Map<Integer, Account> getMapRefVarforCreateAccounts() {
 		return mapOfAccounts;
 	}
-	
+
 	public Account getAccount(int accountNumber) {
 		return mapOfAccounts.get(accountNumber);
 	}
-	
+
 	public void deleteAccount(int accountNumber) {
 		mapOfAccounts.keySet().removeIf(key -> key == accountNumber);
 	}
-	
+
 	public void createJSONFromMap() {
-        ObjectMapper mapper = new ObjectMapper();
+		ObjectMapper mapper = new ObjectMapper();
 		try {
 			String mapJSON;
-			mapJSON=mapper.writeValueAsString(mapOfAccounts);
+			mapJSON = mapper.writeValueAsString(mapOfAccounts);
 			System.out.println(mapJSON);
 		} catch (Exception E) {
 			System.out.println(E);
