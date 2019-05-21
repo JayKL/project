@@ -13,7 +13,7 @@ public class mainTestApp {
 		appref.getAccountManageVar().createAccount("Ben", "Till");
 		appref.getAccountManageVar().createAccount("Gnome", "Till");
 
-		assertEquals(2,appref.getServiceRefVar().countFirstNames());
+		assertEquals(2,appref.getServiceRefVar().countFirstNames("Gnome"));
 	}
 
 }

@@ -5,7 +5,7 @@ import ServiceForApp.Service;
 
 public class App{
 	private AccountManagement accountManageVar=new AccountManagement();
-	private Service serviceRefVar = new Service();
+	private Service serviceRefVar = new Service(accountManageVar);
 
 	public Service getServiceRefVar() {
 		return serviceRefVar;
