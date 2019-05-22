@@ -1,11 +1,23 @@
 package Account;
 
-public class Account {
-	private String firstName;
-	private String lastName;
-	private int accountNumber;
-	private int money=0;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Account {
+	@Column(length=30)
+	private String firstName;
+	@Column(length=30)
+	private String lastName;
+	@Column
+	@Id
+	private int accountNumber;
+	@Column
+	private int money = 0;
+	
+	public Account() {
+	}
 
 	public Account(String firstName, String lastName) {
 		setFirstName(firstName);
@@ -39,8 +51,8 @@ public class Account {
 	public int getMoney() {
 		return money;
 	}
-	
+
 	public void setMoney(int money) {
-		this.money=money;
+		this.money = money;
 	}
 }
