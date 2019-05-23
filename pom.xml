@@ -44,6 +44,10 @@
     </dependency>
   </dependencies>
   
+  	<build>
+		<finalName>APPLICATIONTEST</finalName>
+	</build>
+  
     <properties>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     
