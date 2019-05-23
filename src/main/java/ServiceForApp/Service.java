@@ -1,6 +1,5 @@
 package ServiceForApp;
 
-import java.util.Map;
 
 import Account.Account;
 import AccountManagement.AccountManagement;

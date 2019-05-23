@@ -3,6 +3,8 @@ package Account;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Account {
@@ -12,6 +14,7 @@ public class Account {
 	private String lastName;
 	@Column
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int accountNumber;
 	@Column
 	private int money = 0;

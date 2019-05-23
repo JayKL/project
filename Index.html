@@ -1,0 +1,63 @@
+<html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"> </script>
+
+<script src="main.js">
+
+</script>
+
+<body>
+<div>
+<input value="RUN getAcc" type="button" onclick="runGetAcc()">
+<input type="text" id="numberForGetAcc" > 
+</div><BR>
+
+<div id="returnGetAccDiv">
+First Name: <input type="text" id="getAccFN" readonly> <BR>
+Last Name: <input type="text" id="getAccLN" readonly> <BR>
+Account Number: <input type="text" id="getAccAC" readonly> <BR>
+Money: <input type="text" id="getAccM" readonly > <BR>
+
+</div> <BR> <BR>
+
+
+<div>
+<input value="RUN addAcc" type="button" onclick="addAccount()">
+</div><BR>
+
+<div id="addAccDiv">
+First Name: <input type="text" id="addAccFN"> <BR>
+Last Name: <input type="text" id="addAccLN"> <BR>
+Money: <input type="text" id="addAccM" > <BR>
+
+</div> <BR> <BR>
+
+<div>
+<input value="RUN upAcc" type="button" onclick="updateAccount()">
+</div><BR>
+
+<div id="upAccDiv">
+First Name: <input type="text" id="upAccFN"> <BR>
+Last Name: <input type="text" id="upAccLN"> <BR>
+Account Number: <input type="text" id="upAccN"> <BR>
+</div> <BR> <BR>
+
+<div>
+<input value="RUN deleteAcc" type="button" onclick="delAccount()">
+<input type="text" id="numberForDelAcc" > 
+</div><BR> <BR>
+
+
+<div>
+<input value="RUN getAllAcc" type="button" onclick="getAllAcc()">
+</div><BR>
+
+<div id="returnGetAccDiv">
+	<Table Border='0' id="tableGetAllAcc">
+		<TR><TD align="left">First Name</TD><TD align="left">Last Name</TD><TD align="center">Account Number</TD><TD align="center">Money</TD></TR>
+	</Table>
+</div>
+
+
+</body>
+
+</html>
